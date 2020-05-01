@@ -1,0 +1,38 @@
+[gd_scene format=2]
+
+[node name="GUI_Town" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShopButton" type="Button" parent="."]
+margin_left = 59.4484
+margin_top = 49.1096
+margin_right = 145.448
+margin_bottom = 114.11
+text = "SHOP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Road1Button" type="Button" parent="."]
+margin_left = 182.222
+margin_top = 47.8172
+margin_right = 268.222
+margin_bottom = 112.817
+text = "Road 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Road2Button2" type="Button" parent="."]
+margin_left = 301.119
+margin_top = 54.279
+margin_right = 387.119
+margin_bottom = 119.279
+text = "Road 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}

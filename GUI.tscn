@@ -37,5 +37,16 @@ text = "MAP"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CheatButton" type="Button" parent="."]
+margin_left = -1771.13
+margin_top = -780.611
+margin_right = -1500.13
+margin_bottom = -642.611
+text = "Trip skip"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="speed_changed" from="." to="SpeedProgress" method="_on_GUI_speed_changed"]
 [connection signal="pressed" from="MapButton" to="." method="_on_MapButton_pressed"]
+[connection signal="pressed" from="CheatButton" to="." method="_on_CheatButton_pressed"]

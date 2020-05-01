@@ -43,4 +43,6 @@ func _on_ProgressTimer_timeout():
 	print("[PROGRESS] %s" % progress)
 	if progress >= targetProgress:
 		print("Priehali")
-		# TODO: handle turns and stops
+		# TODO: handle turns
+		# Turn gives 3 second for player to choose a road by going up or down
+		get_tree().change_scene("res://Town.tscn")
