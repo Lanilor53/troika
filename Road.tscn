@@ -2,19 +2,27 @@
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://bgstub.png" type="Texture" id=2]
-[ext_resource path="res://Player.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 958.8, 266.613 )
 
 [node name="Road" type="Node2D"]
 
 [node name="PlayerCart" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 700 )
 scale = Vector2( 3.5, 3.5 )
-script = ExtResource( 3 )
 
 [node name="bgstub" type="Sprite" parent="."]
 position = Vector2( -6.9202, 3.63979 )
 scale = Vector2( 2.08487, 2.00409 )
 z_index = -1
 texture = ExtResource( 2 )
+
+[node name="Sky" type="StaticBody2D" parent="bgstub"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bgstub/Sky"]
+position = Vector2( 1.35216, -270.051 )
+shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
