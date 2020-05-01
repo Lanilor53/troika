@@ -15,6 +15,7 @@ func spawn_obstacle():
 	randomize_timeout()
 
 func randomize_timeout():
+	# TODO: use speed
 	if randf() < 0.4:
 		timer.wait_time = 3
 	else:
