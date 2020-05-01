@@ -17,10 +17,13 @@ func spawn_obstacle():
 	randomize_timeout()
 
 func randomize_timeout():
-	if randf() < 0.4:
-		timer.wait_time = 3/curSpeed*10
+	if curSpeed < 5:
+		timer.wait_time = 5
 	else:
-		timer.wait_time = (randi()%2+1)/curSpeed*10
+		if randf() < 0.4:
+			timer.wait_time = 3/curSpeed*10
+		else:
+			timer.wait_time = (randi()%2+1)/curSpeed*10
 	print(timer.wait_time)
 
 

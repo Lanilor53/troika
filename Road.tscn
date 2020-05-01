@@ -52,6 +52,6 @@ margin_left = 2.65002
 margin_top = 10.6002
 margin_right = 42.65
 margin_bottom = 50.6002
-[connection signal="speed_changed" from="PlayerCart" to="ObstacleController" method="_on_PlayerCart_speed_changed"]
 [connection signal="speed_changed" from="PlayerCart" to="GUI" method="_on_PlayerCart_speed_changed"]
+[connection signal="speed_changed" from="PlayerCart" to="ObstacleController" method="_on_PlayerCart_speed_changed"]
 [connection signal="timeout" from="ObstacleController/Timer" to="ObstacleController" method="spawn_obstacle"]
