@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bgstub.png-784ab52bef7505e9835cea31e05aa001.stex"
+path="res://.import/overBorder.png-7276323bb9a64d4d6cb216a556ebafd7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bgstub.png"
-dest_files=[ "res://.import/bgstub.png-784ab52bef7505e9835cea31e05aa001.stex" ]
+source_file="res://GUI/overBorder.png"
+dest_files=[ "res://.import/overBorder.png-7276323bb9a64d4d6cb216a556ebafd7.stex" ]
 
 [params]
 

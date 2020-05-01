@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Rock Pile.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Rock Pile.png" type="Texture" id=1]
 [ext_resource path="res://Obstacle.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]

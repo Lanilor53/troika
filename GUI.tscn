@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GUI/progressSpeed.png" type="Texture" id=1]
+[ext_resource path="res://GUI/overBorder.png" type="Texture" id=2]
+[ext_resource path="res://GUI.gd" type="Script" id=3]
+[ext_resource path="res://TextureProgress.gd" type="Script" id=4]
+
+[node name="GUI" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+margin_left = -249.477
+margin_top = -962.854
+margin_right = 250.523
+margin_bottom = -912.854
+min_value = 1.0
+max_value = 50.0
+value = 10.0
+texture_over = ExtResource( 2 )
+texture_progress = ExtResource( 1 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="speed_changed" from="." to="TextureProgress" method="_on_GUI_speed_changed"]
