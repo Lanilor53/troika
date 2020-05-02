@@ -7,3 +7,4 @@
 script = ExtResource( 2 )
 
 [node name="GUI_Town" parent="." instance=ExtResource( 1 )]
+[connection signal="town_loaded" from="." to="GUI_Town" method="_on_Town_town_loaded"]

@@ -1,11 +1,14 @@
 extends KinematicBody2D
 
+# TODO: refactor to ProgressManager
+
 var speed = 10
 var maxSpeed = 50
 var minSpeed = 1
 var oldpos = Vector2.ZERO
 var progress = 0
 var targetProgress = 7500
+var destination = ""
 
 signal speed_changed(speed)
 
@@ -42,7 +45,7 @@ func _on_ProgressTimer_timeout():
 	progress += speed
 	print("[PROGRESS] %s" % progress)
 	if progress >= targetProgress:
-		print("Priehali")
+		print("Reached %s" % destination)
 		# TODO: handle turns
 		# Turn gives 3 second for player to choose a road by going up or down
-		get_tree().change_scene("res://Town.tscn")
+		get_parent().get_parent().handle_destination_reached(destination)

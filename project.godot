@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Troika"
-run/main_scene="res://Road.tscn"
+run/main_scene="res://Main.tscn"
 
 [display]
 
