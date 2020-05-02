@@ -1,10 +1,20 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://GUI_Town.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GUI/GUI_Town.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Town.gd" type="Script" id=2]
+[ext_resource path="res://GUI/TownUI.gd" type="Script" id=3]
 
 [node name="Town" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="GUI_Town" parent="." instance=ExtResource( 1 )]
-[connection signal="town_loaded" from="." to="GUI_Town" method="_on_Town_town_loaded"]
+[node name="TownUI" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GUI_Town" parent="TownUI" instance=ExtResource( 1 )]
+[connection signal="town_loaded" from="." to="TownUI/GUI_Town" method="_on_Town_town_loaded"]
+[connection signal="ShopButton_pressed" from="TownUI/GUI_Town" to="TownUI" method="_on_GUI_Town_ShopButton_pressed"]

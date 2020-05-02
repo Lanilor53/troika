@@ -3,7 +3,7 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/bgstub.png" type="Texture" id=2]
 [ext_resource path="res://ObstacleController.gd" type="Script" id=3]
-[ext_resource path="res://GUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 958.8, 266.613 )
@@ -52,6 +52,6 @@ margin_left = 2.65002
 margin_top = 10.6002
 margin_right = 42.65
 margin_bottom = 50.6002
-[connection signal="speed_changed" from="PlayerCart" to="GUI" method="_on_PlayerCart_speed_changed"]
 [connection signal="speed_changed" from="PlayerCart" to="ObstacleController" method="_on_PlayerCart_speed_changed"]
+[connection signal="speed_changed" from="PlayerCart" to="GUI" method="_on_PlayerCart_speed_changed"]
 [connection signal="timeout" from="ObstacleController/Timer" to="ObstacleController" method="spawn_obstacle"]

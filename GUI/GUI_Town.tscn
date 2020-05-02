@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://GUI_Town.gd" type="Script" id=1]
+[ext_resource path="res://GUI/GUI_Town.gd" type="Script" id=1]
 
 [node name="GUI_Town" type="Control"]
 margin_right = 40.0
@@ -21,9 +21,9 @@ __meta__ = {
 }
 
 [node name="Road1Button" type="Button" parent="."]
-margin_left = 56.7883
+margin_left = 53.7883
 margin_top = 151.259
-margin_right = 142.788
+margin_right = 139.788
 margin_bottom = 216.259
 text = "Road 1"
 __meta__ = {
@@ -31,13 +31,14 @@ __meta__ = {
 }
 
 [node name="Road2Button" type="Button" parent="."]
-margin_left = 57.5822
-margin_top = 265.236
-margin_right = 143.582
-margin_bottom = 330.236
+margin_left = 56.4322
+margin_top = 251.336
+margin_right = 142.432
+margin_bottom = 316.336
 text = "Road 2"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="ShopButton" to="." method="_on_ShopButton_pressed"]
 [connection signal="pressed" from="Road1Button" to="." method="_on_Road1Button_pressed"]
 [connection signal="pressed" from="Road2Button" to="." method="_on_Road2Button_pressed"]
